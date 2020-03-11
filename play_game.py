@@ -20,7 +20,7 @@ while True:
     times_ave = times/turns
     print(name + "你已经完了" + str(turns) + "次，最少" + str(min(times_record)) + "轮猜出答案，平均" + str(times_ave)+ "轮猜出答案")
 
-    game_data = "玩家姓名："+ name + "\n一共玩的次数：" + str(times) + "\n平均猜中需要次数: " + str(times/turns) + "\n最快猜中轮次：" + str(min(times_record))
+    game_data = name + " " + str(times) + " " + str(times/turns) + " " + str(min(times_record))
     with open('game_one_user.txt','w') as f:
         f.write(game_data)
 
@@ -30,3 +30,4 @@ while True:
     else:
         print("退出游戏，欢迎下次再来！")
         break
+
